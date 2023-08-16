@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import BookItem from "../BookItem/BookItem";
+import { useFilterContext } from "../Context/FilterContext";
 
 const BookList = ({ books }) => {
   const [searchResults, setSearchResults] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const { selectedThemes } = useFilterContext();
   const booksPerPage = 8;
 
   useEffect(() => {

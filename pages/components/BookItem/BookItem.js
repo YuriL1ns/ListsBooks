@@ -9,12 +9,16 @@ const BookItem = ({ book }) => {
     setShowDetails(!showDetails);
   };
 
+  if (!book || !book.volumeInfo) {
+    return null; // Não renderiza nada se o livro ou suas informações estiverem indefinidas
+  }
+
   return (
     <>
       <div className="bg-white/80 p-1 rounded-md shadow-md text-center">
         <img
-          src={book?.volumeInfo?.imageLinks?.thumbnail}
-          alt={book?.volumeInfo?.title}
+          src={book?.volumeInfo?.imageLinks?.thumbnail || ""}
+          alt={book?.volumeInfo?.title || ""}
           className="w-full h-auto mx-auto rounded-sm text-black"
         />
         <h3 className="text-lg font-semibold text-black mt-2">

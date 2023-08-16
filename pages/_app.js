@@ -1,6 +1,14 @@
 import React from "react";
 import "../styles/globals.css";
+import { FilterProvider } from "./components/Context/FilterContext";
+import SearchBar from "./components/SearchBar/SearchBar";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+const App = () => {
+  return (
+    <FilterProvider>
+      <SearchBar />
+    </FilterProvider>
+  );
+};
+
+export default App;
