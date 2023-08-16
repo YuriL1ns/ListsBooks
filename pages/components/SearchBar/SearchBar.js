@@ -7,7 +7,10 @@ const SearchBar = ({ onSearch }) => {
   const [searchError, setSearchError] = useState("");
 
   const handleSearch = () => {
-    if (query.trim() === "" && selectedThemes.length === 0) {
+    if (
+      query.trim() === "" &&
+      (!selectedThemes || selectedThemes.length === 0)
+    ) {
       setSearchError("Preencha o campo de pesquisa ou selecione um filtro.");
       return;
     }
