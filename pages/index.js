@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css";
 import SearchBar from "./components/SearchBar/SearchBar";
 import BookList from "./components/BookList/BookList";
 import BookDetails from "./components/BookDetails/BookDetails";
-import { FilterProvider } from "./FilterContext";
+import { FilterProvider } from "./components/Context/FilterContext";
 import axios from "axios";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL; // URL base da API do Google Books

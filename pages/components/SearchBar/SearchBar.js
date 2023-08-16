@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useFilterContext } from "../../FilterContext";
+import { useFilterContext } from "../Context/FilterContext";
 
 const SearchBar = ({ onSearch }) => {
   const [query, setQuery] = useState("");
