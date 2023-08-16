@@ -17,3 +17,5 @@ export const FilterProvider = ({ children }) => {
     </FilterContext.Provider>
   );
 };
+
+export default FilterContextPage;
