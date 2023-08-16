@@ -1,34 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Lista de Livros - Aplicação Next.js
 
-## Getting Started
+Bem-vindo ao repositório da aplicação "Lista de Livros" desenvolvida utilizando Next.js e Tailwind CSS. Neste projeto, criamos uma aplicação que permite aos usuários pesquisar por livros específicos utilizando a API do Google Books, exibir detalhes de cada livro e aplicar filtros de pesquisa.
 
-First, run the development server:
+## Funcionalidades Principais
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Página inicial com uma barra de pesquisa e uma lista de livros.
+- Pesquisa por termos de pesquisa e filtros de temas.
+- Exibição de detalhes de cada livro, incluindo título, autor, descrição e outras informações relevantes.
+- Interface responsiva para dispositivos móveis e desktop.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologias Utilizadas
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- [Next.js](https://nextjs.org/): Framework React para criação de aplicativos web rápidos e escaláveis.
+- [Tailwind CSS](https://tailwindcss.com/): Biblioteca de estilização CSS utilitária para criar interfaces modernas e responsivas.
+- [Axios](https://axios-http.com/): Cliente HTTP para fazer requisições à API do Google Books.
+- [Jest](https://jestjs.io/): Framework de testes unitários para JavaScript.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Passos do Desenvolvimento
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. **Configuração do Projeto:**
+   - Inicializamos um novo projeto Next.js utilizando o comando `npx create-next-app`.
+   - Configuramos o ambiente e as variáveis de ambiente para a chave da API do Google Books.
 
-## Learn More
+2. **Componentes Reutilizáveis:**
+   - Criamos componentes reutilizáveis para a barra de pesquisa (`SearchBar`), a lista de livros (`BookList`), cada item da lista (`BookItem`) e os detalhes do livro (`BookDetails`).
 
-To learn more about Next.js, take a look at the following resources:
+3. **Integração com a API do Google Books:**
+   - Utilizamos o Axios para fazer requisições à API do Google Books.
+   - Implementamos a funcionalidade de pesquisa por termos de pesquisa e filtros de temas.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Roteamento e Páginas Dinâmicas:**
+   - Utilizamos as funcionalidades do Next.js para criar páginas estáticas (Static Generation) e páginas dinâmicas para os detalhes dos livros.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+5. **Estilização Responsiva:**
+   - Utilizamos o Tailwind CSS para estilizar a aplicação de forma responsiva, garantindo uma boa experiência em dispositivos móveis e desktop.
 
-## Deploy on Vercel
+6. **Gerenciamento de Estado:**
+   - Utilizamos os hooks `useState` e `useEffect` para gerenciar o estado da aplicação, realizar requisições e atualizar a interface conforme necessário.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+7. **Tratamento de Erros:**
+   - Implementamos tratamento de erros para lidar com situações em que a API do Google Books retorna resultados vazios ou erros de requisição.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+8. **Funcionalidades Extras:**
+   - Implementamos uma funcionalidade de filtro de temas na barra de pesquisa.
+   - Adicionamos a opção de paginação na lista de livros para exibir mais resultados.
+
+9. **Testes Unitários:**
+   - Utilizamos o Jest para escrever testes unitários para os componentes e funções principais da aplicação.
+
+## Execução Local
+
+1. Clone este repositório para o seu ambiente local.
+2. Navegue para o diretório do projeto no terminal.
+3. Execute `npm install` para instalar as dependências.
+4. Crie um arquivo `.env.local` na raiz do projeto com as variáveis `NEXT_PUBLIC_BASE_URL` e `NEXT_PUBLIC_KEY_API_GOOGLE`.
+5. Execute `npm run dev` para iniciar o servidor de desenvolvimento.
+
+## Como Contribuir
+
+1. Faça um fork deste repositório.
+2. Crie uma nova branch com a sua contribuição.
+3. Faça as alterações desejadas e adicione commits.
+4. Envie um Pull Request neste repositório.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+Desenvolvido por [Yuri Lins](https://github.com/YuriL1ns) - [LinkedIn](https://www.linkedin.com/in/yuri-lins-304a0523a/)
