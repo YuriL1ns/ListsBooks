@@ -1,4 +1,5 @@
 module.exports = {
+  swcMinify: false,
   reactStrictMode: true, // Habilita o modo de estrita conformidade com o React
   optimizeFonts: false, // Desativa a otimização de carregamento de fontes
   images: {
