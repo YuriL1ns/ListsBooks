@@ -1,10 +1,10 @@
-# Lista de Livros - Aplicação Next.js
+# Lista de Livros - Aplicação em Next.js com TailwindCSS.
 
 Bem-vindo ao repositório da aplicação "Lista de Livros" desenvolvida utilizando Next.js e Tailwind CSS. Neste projeto, criamos uma aplicação que permite aos usuários pesquisar por livros específicos utilizando a API do Google Books, exibir detalhes de cada livro e aplicar filtros de pesquisa.
 
 ## Funcionalidades Principais
 
-- Página inicial com uma barra de pesquisa e uma lista de livros.
+- Página inicial com uma barra de pesquisa e uma lista de livros em destaques.
 - Pesquisa por termos de pesquisa e filtros de temas.
 - Exibição de detalhes de cada livro, incluindo título, autor, descrição e outras informações relevantes.
 - Interface responsiva para dispositivos móveis e desktop.
@@ -55,6 +55,124 @@ Bem-vindo ao repositório da aplicação "Lista de Livros" desenvolvida utilizan
 3. Execute `npm install` para instalar as dependências.
 4. Crie um arquivo `.env.local` na raiz do projeto com as variáveis `NEXT_PUBLIC_BASE_URL` e `NEXT_PUBLIC_KEY_API_GOOGLE`.
 5. Execute `npm run dev` para iniciar o servidor de desenvolvimento.
+
+## Ambiente de Desenvolvimento (Dev):
+
+1. **Configuração Inicial:**
+
+    a. Certifique-se de ter o Node.js e o npm (ou yarn) instalados na sua máquina.
+
+    b. Crie um novo diretório para o seu projeto e navegue até ele no terminal.
+
+    c. Inicie um novo projeto Node.js executando o seguinte comando:
+
+    ```bash
+    npm init -y
+    ```
+
+2. **Instalação de Dependências:**
+
+    a. Instale as dependências necessárias para testes usando Jest e @testing-library:
+
+    ```bash
+    npm install --save-dev jest @testing-library/react @testing-library/jest-dom
+    ```
+
+3. **Estrutura de Pastas:**
+
+    a. Organize a estrutura de pastas do seu projeto. Um exemplo básico:
+
+    ```
+    /my-project
+    ├── jest.config.js
+    ├── jest.setup.js
+    ├── package.json
+    ├── pages/
+    │   ├── components/
+    │   │   └── ...
+    │   └── ...
+    ├── __tests__/
+    │   ├── index.test.js
+    │   └── ...
+    └── ...
+    ```
+
+4. **Configuração do Jest:**
+
+    a. Crie um arquivo `jest.config.js` na raiz do projeto com o seguinte conteúdo:
+
+    ```javascript
+    module.exports = {
+      setupFilesAfterEnv: ['./jest.setup.js'],
+      // ... outras configurações que desejar ou necessitar ...
+    };
+    ```
+
+    b. Crie um arquivo `jest.setup.js` na raiz do projeto com o seguinte conteúdo:
+
+    ```javascript
+    import '@testing-library/jest-dom/extend-expect';
+    ```
+
+5. **Escrevendo e Executando Testes:**
+
+    a. Crie os arquivos de teste na pasta `__tests__` seguindo o padrão de nomenclatura, como `components.test.js`.
+
+    b. Escreva testes usando o Jest e as bibliotecas de teste.
+
+    c. Execute os testes usando o seguinte comando:
+
+    ```bash
+    npx jest
+    ```
+
+## Executando o Projeto em Localhost:
+
+1. Após a instalação das dependências, inicie o aplicativo localmente com o seguinte comando:
+
+    ```bash
+    npm run dev
+    ```
+
+2. **Acessando o Aplicativo:**
+
+    a. Abra o navegador da web e acesse o seguinte endereço:
+
+    ```
+    http://localhost:3000
+    ```
+    
+    b. Agora você deve ver o aplicativo sendo executado localmente no seu navegador.
+
+3. **Executando os Testes:**
+
+    a. No seu terminal pressione "Ctrl + C", para encerrar o servidor local.
+
+    b. Para executar os testes unitários, você pode usar o seguinte comando:
+
+    ```bash
+    npx jest
+    ```
+
+## Ambiente de Produção (Prod):
+
+1. **Preparação para Produção:**
+
+    a. Certifique-se de que seu projeto está pronto para ser implantado em produção, com todas as dependências e arquivos necessários.
+
+2. **Testes Unitários:**
+
+    a. Seus testes unitários devem ser executados durante o processo de integração contínua ou antes de implantar novas versões do seu aplicativo.
+
+    b. Integre a execução dos testes unitários em seus scripts de implantação ou ferramentas de integração contínua.
+
+3. **Ambiente de Produção:**
+
+    a. Depois de implantar em produção, monitore a saúde do seu aplicativo e a integridade dos testes unitários.
+
+    b. Caso surjam problemas ou regressões, investigue e corrija as falhas nos testes e no código do aplicativo.
+
+A Execução de testes unitários é uma parte importante do desenvolvimento de software, pois ajuda a garantir que seu código esteja funcionando conforme o esperado e evita a introdução de bugs em seu projeto.
 
 ## Como Contribuir
 
